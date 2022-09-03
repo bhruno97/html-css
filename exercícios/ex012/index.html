@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+    <video src="midia/meu-video.webm" width="300" preload="metadata" controls></video>
+
+    <p>Colocando vários vídeos na mesma tag</p>
+    <video preload="metadata" width="300" poster="imagens/thumbnail.png" controls autoplay loop>
+        <!-- A ordem das sources abaixo é importante, caso não carregue o primeiro, ele tentará o segundo e assim sucessivamente, caso não carregue nenhum, ele irá apresentar a mensagem de erro.-->
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/m4v">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogv">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos. <a href="midia/meu-video.mp4"> Clique aqui para baixar o vídeo.</a></p>
+    </video>
+    
+    <h1>Inserindo vídeos do YouTube</h1>
+    <iframe width="300" height="169" src="https://www.youtube.com/embed/FdE5G95B7Mg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeos do Vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/256526612?h=f826438114&color=ffffff&portrait=0" width="300" height="169" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
